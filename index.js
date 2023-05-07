@@ -21,7 +21,7 @@ app.use(session({
  
 app.use(allRoutes);
  
-sequelize.sync({ force:false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => {
         console.log(`Listening to port ${PORT}`);
     });
