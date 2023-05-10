@@ -4,10 +4,10 @@ const { User, Post, Comment } = require("../models");
 const users = [
     {
         username: "userA",
-        password: "passwordA",
+        password: "password",
     },{
         username: "userB",
-        password: "passwordB",
+        password: "password",
     },
 ];
 
