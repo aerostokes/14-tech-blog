@@ -47,7 +47,12 @@ router.post("/", (req, res) => {
         username: req.body.username,
         password: req.body.password,
     }).then(userObj => {
-        res.json({ msg: "Successfully created", userObj })
+        req.session.UserId = userObj.id;
+        req.session.loggedIn = true;
+        return res.json([
+            { msg: "Signup successful" }, 
+            req.session,
+        ]);
     }).catch(err => {
         console.log(err);
         res.status(500).json({ msg: "Error Occurred", err });

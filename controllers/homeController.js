@@ -30,16 +30,29 @@ router.get("/", async (req, res) => {
 
 
 router.get("/login", async (req,res) => {
-    try {
-      if (req.session.userId) {
-        res.redirect("/")
-      } else {
-        res.render("login")
-      }
-    } catch (error) {
-      console.log(error)
-      res.status(500).json(error);
+  try {
+    if (req.session.userId) {
+      res.redirect("/")
+    } else {
+      res.render("login")
     }
-  })
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error);
+  }
+})
+
+router.get("/signup", async (req,res) => {
+  try {
+    if (req.session.userId) {
+      res.redirect("/")
+    } else {
+      res.render("signup")
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error);
+  }
+})
 
 module.exports = router;
