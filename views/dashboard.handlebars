@@ -1,0 +1,30 @@
+
+{{#each allPosts}}
+<div class="card">
+    <div class="card-header flex-row justify-space-between">
+        <h2><a href="/posts/{{id}}">{{title}}</a></h2>
+        <h6 style="font-weight:100">Posted by {{username}} on {{createdAt}}</h6>
+    </div>
+    <div class="card-body">
+        <p>{{contents}}</p>
+    </div>
+</div>
+{{/each}}
+
+
+
+<div class="card">
+    <div class="card-header flex-row justify-space-between">
+        <h2>+ Add a New Post</h2>
+    </div>
+    <div class="card-body">
+        <form id="post-form">
+        <label for="title-input">Title:</label>
+        <input type="text" id="title-input">
+        <label for="contents-input">Contents:</label>
+        <textarea type="text" id="contents-input" class="form-textarea" style="width:100%; line-height:2.5"></textarea>
+        <button class="btn" type="submit">Submit</button>
+    </div>
+    <script src="/js/addpost.js"></script>
+</div>
+

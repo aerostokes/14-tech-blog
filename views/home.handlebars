@@ -1,11 +1,11 @@
 {{#each allPosts}}
 <div class="card">
     <div class="card-header flex-row justify-space-between">
-        <h2>{{title}}</h2>
+        <h2><a href="/posts/{{id}}">{{title}}</a></h2>
         <h6 style="font-weight:100">Posted by {{User.username}} on {{createdAt}}</h6>
     </div>
     <div class="card-body">
         <p>{{contents}}</p>
     </div>
-</div   >
+</div>
 {{/each}}

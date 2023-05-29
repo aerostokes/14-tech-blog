@@ -3,7 +3,7 @@ const password = document.querySelector("#password-input");
 const confirm = document.querySelector("#confirm-input");
 
 
-const login = async (e) => {
+const signup = async (e) => {
   e.preventDefault();
   if (password.value !== confirm.value) {
     alert("Passwords must match")
@@ -24,4 +24,4 @@ const login = async (e) => {
   }
 }
 
-form.addEventListener("submit", login);
+form.addEventListener("submit", signup);
