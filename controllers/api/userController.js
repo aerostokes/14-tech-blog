@@ -6,7 +6,6 @@ const bcrypt = require("bcrypt");
 // Routes for /api/users
 
 // Get all Users
-// TODO delete
 router.get("/all", (req, res) => {
     User.findAll({ 
         include: [Post, Comment],

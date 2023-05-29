@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>
+<body class="flex-column min-100-vh">
+    <nav class="navbar">
+        <ul>
+            <li class="li-inline nav-item"><a href="/">Home</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+            {{#if UserId}}
+            <li class="li-inline nav-item"><button id="logout" class="btn-no-style">Logout</button></li>
+            <script src="js/logout.js"></script>
+            {{else}}
+            <li class="li-inline nav-item"><a href="/login">Login</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1 class="app-title"><a href="/">Tech Blog</a></h1>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+</body>
+</html>
